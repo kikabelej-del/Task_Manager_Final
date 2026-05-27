@@ -80,12 +80,18 @@ def odstranit_ukol(ukoly):
     Vrací:
         list: Aktualizovaný seznam úkolů.
     """
-    if not zobrazit_ukoly(ukoly):
+    if not ukoly(ukoly):
+        print("\nSeznam úkolů je prázdný, není co odstranit.")
         return ukoly
+    
+    zobrazit_ukoly(ukoly)
 
     while True:
         try:
-            index = int(input("Zadejte číslo úkolu, který chcete odstranit: "))
+            vstup = input("Zadejte číslo úkolu, který chcete odstranit: ").strip()
+            
+            index = int(vstup)
+            
             if 1 <= index <= len(ukoly):
                 odstraneny = ukoly.pop(index - 1)
                 print(f"Úkol '{odstraneny['nazev']}' byl odstraněn.")
