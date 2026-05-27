@@ -1,28 +1,15 @@
-# Projekt: Task Manager
+# Správce úkolů (Task Manager)
 
-Projekt vytvořený v rámci kurzu IT tester – Engeto.
+Jednoduchá konzolová aplikace v jazyce Python určená pro efektivní správu každodenních úkolů. Umožňuje uživateli vytvářet nové úkoly, přehledně je zobrazovat a odstraňovat ty již splněné.
 
-## Popis programu
+## Funkcionalita programu
+1. **Přidat nový úkol:** Uživatel zadá název a popis úkolu. Vstupy jsou validovány proti prázdným hodnotám.
+2. **Zobrazit všechny úkoly:** Vypíše přehledný, automaticky číslovaný seznam všech uložených úkolů.
+3. **Odstranit úkol:** Umožňuje bezpečné smazání úkolu podle jeho pořadového čísla s kompletním ošetřením chybných číselných či textových vstupů.
+4. **Konec programu:** Ukončení aplikace.
 
-Program umožňuje správu úkolů prostřednictvím hlavního menu.
-Úkoly jsou uloženy v seznamu a lze je přidávat, zobrazovat a odstraňovat.
-
-## Funkce programu
-
-- hlavni_menu() – zobrazí hlavní menu s volbami 1–4
-- pridat_ukol() – přidá nový úkol se jménem a popisem, opakuje výzvu při prázdném vstupu
-- zobrazit_ukoly() – vypíše všechny úkoly v seznamu
-- odstranit_ukol() – odstraní úkol podle zadaného čísla
-
-## Spuštění programu
-
-Program se spouští v prostředí VS Code příkazem:
-
-python projekt.task_manager.py
-
-## Testování
-
-Součástí projektu jsou testovací případy pokrývající:
-- pozitivní testy – správné použití funkcí
-- negativní testy – neplatné nebo prázdné vstupy
-- hraniční případy – prázdný seznam, první a poslední úkol
+## Požadavky a spuštění
+* **Požadavky:** Python verze 3.6 nebo vyšší.
+* **Spuštění aplikace:**
+  ```bash
+  python task_manager.py
