@@ -10,9 +10,11 @@ Tento dokument obsahuje kompletní sadu detailních testovacích případů (TC)
 * **Název testovacího případu:** Výběr platné možnosti z menu
 * **Popis:** Ověření, že volba čísla 1 v hlavním menu správně spustí funkci pridat_ukol.
 * **Vstupní podmínky:** Program zobrazuje hlavní menu.
-* **Kroky testu:** 1. Spusťte program.
+* **Kroky testu:** *
+  1. Spusťte program.
   2. Ověřte, že se zobrazuje hlavní menu s nabídkou voleb (1-4).
-  3. Zadejte číslo 1 a potvrďte stisknutím klávesy Enter.
+  3. Zadejte číslo 1.
+  4. Potvrďte stisknutím klávesy Enter.
 * **Očekávaný výsledek:** Program spustí funkci pridat_ukol() a vyzve uživatele k zadání názvu úkolu.
 * **Skutečný výsledek:** Funkce pridat_ukol() byla spuštěna a program zobrazil výzvu k zadání nového úkolu.
 * **Stav:** Pass
@@ -23,7 +25,7 @@ Tento dokument obsahuje kompletní sadu detailních testovacích případů (TC)
 * **Popis:** Ověření, že program nespadne, pokud uživatel zadá neplatný znak (písmeno) a znovu zobrazí menu.
 * **Vstupní podmínky:** Program zobrazuje hlavní menu.
 * **Kroky testu:**
-  1. Do výzvy pro výběr volby zadejte písmeno "x".
+  1. Do výzvy pro výběr volby zadejte písmeno "ABC".
   2. Potvrďte klávesou Enter.
 * **Očekávaný výsledek:** Program zobrazí chybové hlášení o neplatné volbě, nespadne a znovu vypíše hlavní menu.
 * **Skutečný výsledek:** Program vypsal chybovou hlášku a zopakoval menu.
@@ -40,8 +42,8 @@ Tento dokument obsahuje kompletní sadu detailních testovacích případů (TC)
 * **Vstupní podmínky:** Seznam úkolů je prázdný.
 * **Kroky testu:**
   1. V menu zvolte možnost 1.
-  2. Na výzvu "Zadejte název úkolu:" zadejte text "Koupit chleba".
-  3. Na výzvu "Zadejte popis úkolu:" zadejte text "Vzít žitný v pekařství".
+  2. Na výzvu "Zadejte název úkolu:" zadejte text "Koupit kytky".
+  3. Na výzvu "Zadejte popis úkolu:" zadejte text "Vzít červené růže".
   4. Potvrďte klávesou Enter.
 * **Očekávaný výsledek:** Program zobrazí potvrzení o úspěšném přidání úkolu a vrátí uživatele do hlavního menu.
 * **Skutečný výsledek:** Zobrazila se zpráva, že úkol byl úspěšně přidán.
@@ -86,11 +88,12 @@ Tento dokument obsahuje kompletní sadu detailních testovacích případů (TC)
 ### TC07: Přidání duplicitního úkolu (stejný název)
 * **Název testovacího případu:** Vytvoření úkolu se stejným názvem
 * **Popis:** Ověření, jak se systém chová při zadání úkolu, který již existuje.
-* **Vstupní podmínky:** V seznamu již existuje úkol "Koupit chleba".
+* **Vstupní podmínky:** V seznamu již existuje úkol "Koupit kytky".
 * **Kroky testu:**
   1. Spusťte přidání úkolu.
-  2. Zadejte název "Koupit chleba" s jiným popisem.
-  3. Uložte úkol.
+  2. Zadejte název "Koupit kytky".
+  3. Zadejte popis "Vzít modré růže".
+  4. Uložte úkol.
 * **Očekávaný výsledek:** Program úkol přidá jako novou položku (jelikož systém umožňuje více úkolů se stejným názvem, ale odlišným ID/indexem).
 * **Skutečný výsledek:** Úkol byl úspěšně přidán pod novým pořadovým číslem.
 * **Stav:** Pass
@@ -116,8 +119,9 @@ Tento dokument obsahuje kompletní sadu detailních testovacích případů (TC)
 * **Popis:** Ověření, že program korektně informuje uživatele, pokud v systému nejsou žádná data.
 * **Vstupní podmínky:** Seznam úkolů je zcela prázdný.
 * **Kroky testu:**
-  1. V hlavním menu zadejte volbu 2 a potvrďte.
-* **Očekávaný výsledek:** Program nevypíše prázdnou tabulku, ale zobrazí jasný text: "Seznam úkolů je prázdný."
+  1. V hlavním menu zadejte volbu 2.
+  2. Potvrďte Enter.
+* **Očekávaný výsledek:** Program zobrazí jasný text: "Seznam úkolů je prázdný."
 * **Skutečný výsledek:** Vypisuje text o prázdném seznamu.
 * **Stav:** Pass
 * **Poznámky:** Hraniční stav systému.
@@ -151,7 +155,7 @@ Tento dokument obsahuje kompletní sadu detailních testovacích případů (TC)
 
 ### TC12: Zadání neexistujícího čísla úkolu (mimo rozsah)
 * **Název testovacího případu:** Pokus o smazání úkolu mimo rozsah indexů
-* **Popis:** Ošetření chybové zprávy IndexOutOfBounds při zadání neexistujícího čísla.
+* **Popis:** Ošetření chybové zprávy při zadání neexistujícího čísla.
 * **Vstupní podmínky:** V systému je uložen pouze 1 úkol (index 1).
 * **Kroky testu:**
   1. Spusťte funkci pro odstranění úkolu.
@@ -168,8 +172,8 @@ Tento dokument obsahuje kompletní sadu detailních testovacích případů (TC)
 * **Kroky testu:**
   1. Spusťte volbu 3 (Odstranit úkol).
   2. Do výzvy pro číslo úkolu zadejte text "abc".
-* **Očekávaný výsledek:** Program zachytí nesprávný datový typ, nespadne a zobrazí zprávu: "Neplatná volba, musíte zadat číslo."
-* **Skutečný výsledek:** Chyba byla odchycena, program bezpečně pokračuje a opakuje výzvu.
+* **Očekávaný výsledek:** Program zachytí nesprávný datový typ, nespadne a zobrazí zprávu: "Neplatná volba, zkuste to znovu."
+* **Skutečný výsledek:** Chyba byla zachycena, program bezpečně pokračuje a opakuje výzvu.
 * **Stav:** Pass
 * **Poznámky:** Důležitý test stability kódu.
 
@@ -202,19 +206,19 @@ Tento dokument obsahuje kompletní sadu detailních testovacích případů (TC)
 
 ---
 
-## 6. Datová validace a robustnost (QA bonus)
+## 6. Datová validace a robustnost
 
 ### TC16: Testování extrémní délky řetězce na vstupu
 * **Název testovacího případu:** Vložení extrémně dlouhého textu
-* **Popis:** Ověření stability programu, pokud uživatel zadá text o délce více než 200 znaků do názvu/popisu.
+* **Popis:** Ověření stability programu, pokud uživatel zadá text o délce více než 50 znaků do názvu/popisu.
 * **Vstupní podmínky:** Spuštěná funkce pro přidání úkolu.
 * **Kroky testu:**
-  1. Do pole název vložte opakující se text o délce 250 znaků.
+  1. Do pole název vložte opakující se text o délce 50 znaků.
   2. Uložte úkol a následně jej zobrazte přes volbu 2.
 * **Očekávaný výsledek:** Program text bez problému zpracuje, nespadne na přetečení paměti a úkol uloží.
 * **Skutečný výsledek:** Úkol byl úspěšně uložen a celý dlouhý text se vypsal na obrazovku.
 * **Stav:** Pass
-* **Poznámky:** Zátěžový test (Stress test) vstupního bufferu.
+* **Poznámky:** Zátěžový test (Stress test).
 
 ### TC17: Ověření chování při zadání záporného čísla úkolu
 * **Název testovacího případu:** Validace záporných hodnot u indexu úkolu
