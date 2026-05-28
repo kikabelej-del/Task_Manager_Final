@@ -341,9 +341,9 @@ Tento dokument obsahuje kompletní sadu testovacích případů (TC) pro ověře
 
 3. Do výzvy „Zadejte název úkolu:" nezadávejte nic a stiskněte pouze klávesu Enter.
 
-**Očekávaný výsledek:** Program zobrazí hlášení „Neplatná volba, zkuste to znovu." a znovu vyzve uživatele k zadání názvu úkolu.
+**Očekávaný výsledek:** Program zobrazí hlášení „Název nesmí bžt prázdný, zkuste to znovu." a znovu vyzve uživatele k zadání názvu úkolu.
 
-**Skutečný výsledek:** Program odmítl prázdný název, zobrazil hlášení „Neplatná volba, zkuste to znovu." a znovu vyzval uživatele k zadání názvu úkolu.
+**Skutečný výsledek:** Program odmítl prázdný název, zobrazil hlášení „Název nesmí bžt prázdný, zkuste to znovu." a znovu vyzval uživatele k zadání názvu úkolu.
 
 **Stav:** Pass 
 
@@ -369,9 +369,9 @@ Tento dokument obsahuje kompletní sadu testovacích případů (TC) pro ověře
 
 4. Do výzvy „Zadejte popis úkolu:" nezadávejte nic a stiskněte pouze klávesu Enter.
 
-**Očekávaný výsledek:** Program zobrazí hlášení „Neplatná volba, zkuste to znovu." a znovu vyzve uživatele k zadání popisu úkolu.
+**Očekávaný výsledek:** Program zobrazí hlášení „Popis nesmí být prázdný, zkuste to znovu." a znovu vyzve uživatele k zadání popisu úkolu.
 
-**Skutečný výsledek:** Program odmítl prázdný popis, zobrazil hlášení „Neplatná volba, zkuste to znovu." a znovu vyzval uživatele k zadání popisu úkolu.
+**Skutečný výsledek:** Program odmítl prázdný popis, zobrazil hlášení „Popis nesmí být prázdný, zkuste to znovu." a znovu vyzval uživatele k zadání popisu úkolu.
 
 **Stav:** Pass 
 
