@@ -8,15 +8,25 @@ Tento dokument obsahuje kompletní sadu testovacích případů (TC) pro ověře
 ---
 
 ### TC01: Spuštění programu a zobrazení hlavního menu
+
 **Název testovacího případu:** Spuštění programu a zobrazení hlavního menu
+
 **Popis:** Ověření, že po spuštění programu se zobrazí hlavní menu s nabídkou voleb 1–4.
+
 **Vstupní podmínky:** Program není spuštěn.
+
 **Kroky testu:**
+
 1. Spusťte program.
-2. Stisknete Enter.
+   
+3. Stisknete Enter.
+   
 **Očekávaný výsledek:** Program zobrazí hlavní menu s nabídkou voleb „1. Přidat nový úkol", „2. Zobrazit všechny úkoly", „3. Odstranit úkol", „4. Konec programu".
+
 **Skutečný výsledek:** Program se po spuštění správně zobrazil s hlavním menu obsahujícím nabídku voleb „1. Přidat nový úkol", „2. Zobrazit všechny úkoly", „3. Odstranit úkol" a „4. Konec programu".
+
 **Stav:** Pass 
+
 **Poznámky:** Základní smoke test ověřující spuštění programu.
 
 ---
