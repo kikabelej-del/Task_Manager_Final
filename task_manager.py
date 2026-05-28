@@ -54,13 +54,13 @@ def pridat_ukol(ukoly):
         nazev = input("Zadejte název úkolu: ").strip()
         if nazev:
             break
-        print("Neplatná volba, zkuste to znovu.")
+        print("Název nesmí být prázdný, zkuste to znovu.")
 
     while True:
         popis = input("Zadejte popis úkolu: ").strip()
         if popis:
             break
-        print("Neplatná volba, zkuste to znovu.")
+        print("Popis nesmí být prázdný, zkuste to znovu.")
 
     novy_ukol = {"nazev": nazev, "popis": popis}
     ukoly.append(novy_ukol)
@@ -80,16 +80,15 @@ def odstranit_ukol(ukoly):
     Vrací:
         list: Aktualizovaný seznam úkolů.
     """
-    if not ukoly(ukoly):
+    if not ukoly:
         print("\nSeznam úkolů je prázdný, není co odstranit.")
         return ukoly
-    
+
     zobrazit_ukoly(ukoly)
 
     while True:
         try:
             vstup = input("Zadejte číslo úkolu, který chcete odstranit: ").strip()
-            
             index = int(vstup)
             
             if 1 <= index <= len(ukoly):
